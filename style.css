@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.botao-envio {
+    background-color: green;
+}
+.botao-apagar {
+    background-color: red;
+}
