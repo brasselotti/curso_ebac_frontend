@@ -1,0 +1,38 @@
+:root {
+    --branco: #fff;
+    --cor-azul1: #2d4058;
+    --cor-azul2: #467b94;
+    --cor-azul3: #a0b8be;
+    --cor-verde1: #588a24;
+    --cor-verde2: #9EC42E;
+    --cor-vermelho: rgb(175, 42, 42);
+    --cor-cinza1: rgb(209, 208, 208);
+    --cor-bordas: #8d8a8a;
+    --fonte1: "Lily Script One", system-ui;
+    --fonte2: "Lexend", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte2);
+}
+
+header {
+    background-color: var(--cor-azul1);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+h1 {
+    font-family: var(--fonte1);
+}
+
+body {
+    background-color: var(--cor-azul3);
+}
