@@ -27,12 +27,158 @@ header {
     justify-content: center;
     align-items: center;
     padding: .5rem;
+    border-bottom: 4px solid var(--cor-verde1);
 }
 
-h1 {
+h1, h2 {
     font-family: var(--fonte1);
 }
 
 body {
     background-color: var(--cor-azul3);
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+#container-form {
+    position: relative;
+    top: 2rem;
+    padding: 1rem 2rem;
+    justify-self: center;
+    border: 3px solid var(--cor-verde1);
+    border-radius: 20px;
+    background-color: var(--cor-cinza1);
+}
+
+#container-form h2, #container-list h2 {
+    color: var(--cor-azul1);
+    font-family: var(--fonte2);
+    font-size: 2rem;
+    justify-self: center;
+    margin-bottom: .5rem;
+}
+
+button, input {
+    height: 2rem;
+    border: 1px solid var(--cor-bordas);
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+input[type="text"]{
+    field-sizing: content;
+    min-width: 200px;
+    max-width: 350px;
+}
+
+input:focus {
+    outline: 2px solid var(--cor-azul1);
+}
+
+#botao-submit {
+    margin-left: 1rem;
+}
+
+#botao-submit:hover {
+    background-color: var(--cor-azul3);
+    cursor: pointer;
+}
+
+#container-list {
+    position: relative;
+    top: 3rem;
+    padding: 1rem 2rem;
+    justify-self: center;
+    border: 3px solid var(--cor-verde1);
+    border-radius: 20px;
+    background-color: var(--cor-cinza1);
+}
+
+#container-list h2 {
+    font-weight: 400;
+}
+
+ul {
+    color: var(--cor-azul1);
+    max-width: 70vw;
+}
+
+li {
+    margin-bottom: .2rem;
+    list-style-position: inside;
+    cursor: pointer;
+}
+
+ul#minha-lista {
+    list-style: none;
+    padding: 0; /* Remova o padding padrão se o bullet estiver fora do container */
+    margin: 0;
+}
+
+ul#minha-lista li {
+    display: flex; /* Para alinhar a checkbox customizada e o texto */
+    align-items: center; /* Alinha verticalmente no centro */
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer; /* Indica que o item é clicável */
+    transition: background-color 0.2s ease;
+}
+
+ul#minha-lista li:hover {
+    background-color: #f0f0f0;
+}
+
+/* O elemento visual da checkbox customizada */
+ul#minha-lista li .checkbox-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 4px; /* Levemente arredondado */
+    margin-right: 10px; /* Espaço entre o checkbox e o texto */
+    background-color: #fff;
+    flex-shrink: 0; /* Impede que o checkbox encolha */
+    cursor: pointer; /* Confirma que o span também é clicável */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Estilo quando a checkbox customizada está 'marcada' */
+ul#minha-lista li .checkbox-custom.checked {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    border-color: #4CAF50; /* Borda verde */
+}
+
+/* O 'visto' (checkmark) dentro da checkbox customizada */
+ul#minha-lista li .checkbox-custom.checked::after {
+    content: '\2713'; /* Caractere Unicode para 'checkmark' (✓) */
+    display: block;
+    color: white; /* Cor do visto */
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px; /* Centraliza o visto verticalmente */
+}
+
+/* Estilo para o texto da tarefa */
+ul#minha-lista li .tarefa-texto {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    color: #333;
+}
+
+/* Estilo para o LI quando o item é 'concluído' (riscar o texto) */
+ul#minha-lista li.completed .tarefa-texto {
+    text-decoration: line-through; /* Risca o texto */
+    color: #888; /* Escurece a cor do texto */
+}
+
+/* Adicione um estilo de foco básico para acessibilidade,
+   mesmo que não seja um input nativo, para indicar interatividade */
+ul#minha-lista li:focus-within { /* Aplica estilo se algum descendente estiver em foco, ou o próprio LI se tiver tabindex */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    outline: none; /* Remover outline padrão se houver */
 }
