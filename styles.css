@@ -27,12 +27,87 @@ header {
     justify-content: center;
     align-items: center;
     padding: .5rem;
+    border-bottom: 4px solid var(--cor-verde1);
 }
 
-h1 {
+h1, h2 {
     font-family: var(--fonte1);
 }
 
 body {
     background-color: var(--cor-azul3);
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+#container-form {
+    position: relative;
+    top: 2rem;
+    padding: 1rem 2rem;
+    justify-self: center;
+    border: 3px solid var(--cor-verde1);
+    border-radius: 20px;
+    background-color: var(--cor-cinza1);
+}
+
+#container-form h2, #container-list h2 {
+    color: var(--cor-azul1);
+    font-family: var(--fonte2);
+    font-size: 2rem;
+    justify-self: center;
+    margin-bottom: .5rem;
+}
+
+button, input {
+    height: 2rem;
+    border: 1px solid var(--cor-bordas);
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+input[type="text"]{
+    field-sizing: content;
+    min-width: 200px;
+    max-width: 350px;
+}
+
+input:focus {
+    outline: 2px solid var(--cor-azul1);
+}
+
+#botao-submit {
+    margin-left: 1rem;
+}
+
+#botao-submit:hover {
+    background-color: var(--cor-azul3);
+    cursor: pointer;
+}
+
+#container-list {
+    position: relative;
+    top: 3rem;
+    padding: 1rem 2rem;
+    justify-self: center;
+    border: 3px solid var(--cor-verde1);
+    border-radius: 20px;
+    background-color: var(--cor-cinza1);
+}
+
+#container-list h2 {
+    font-weight: 400;
+}
+
+ul {
+    color: var(--cor-azul1);
+    max-width: 70vw;
+}
+
+li {
+    margin-bottom: .2rem;
+    list-style-position: inside;
+    cursor: pointer;
 }

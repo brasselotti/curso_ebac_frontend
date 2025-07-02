@@ -13,7 +13,17 @@
         <p>Não se esqueça de nada, digite abaixo o que precisamos fazer!</p>
     </header>
     <main>
-
+        <div id="container-form">
+            <form>
+                <h2>Vamos lá!</h2>
+                <input type="text" id="tarefa" placeholder="Digite aqui a nova tarefa">
+                <button type="submit" id="botao-submit">Adicionar</button>
+            </form>
+        </div>
+        <div id="container-list" style="display: none;">
+            <h2>Lembre-se:</h2>
+            <ul id="minha-lista"></ul>
+        </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./main.js"></script>
