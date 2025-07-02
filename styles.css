@@ -1,7 +1,7 @@
 :root {
     --branco: #fff;
     --cor-azul1: #2d4058;
-    --cor-azul2: #467b94;
+    --cor-azul2: rgb(70, 123, 148);
     --cor-azul3: #a0b8be;
     --cor-verde1: #588a24;
     --cor-verde2: #9EC42E;
@@ -104,10 +104,66 @@ input:focus {
 ul {
     color: var(--cor-azul1);
     max-width: 70vw;
+    list-style: none;
 }
 
-li {
+ul#minha-lista li {
     margin-bottom: .2rem;
-    list-style-position: inside;
+    cursor: pointer;
+    display: flex;
+}
+
+ul#minha-lista li:hover {
+    background-color: rgba(70,123,148,.2) ;
+    border-radius: 3px;
+}
+
+ul#minha-lista li .checkbox-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 4px; 
+    margin-right: 10px;
+    background-color: #fff;
+    flex-shrink: 0; /* Impede que o checkbox encolha */
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+ul#minha-lista li .checkbox-custom.checked {
+    background-color: var(--cor-verde1); 
+    border-color: var(--cor-verde1); 
+}
+
+ul#minha-lista li .checkbox-custom.checked::after {
+    content: '\2713'; /* Caractere Unicode para 'checkmark' (✓) */
+    display: block;
+    color: white; /* Cor do visto */
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px; /* Centraliza o visto verticalmente */
+}
+
+ul#minha-lista li.completed .tarefa-texto {
+    text-decoration: line-through; /* Risca o texto */
+    color: #888; /* Escurece a cor do texto */
+}
+
+ul#minha-lista li:focus {
+    /* É importante remover o outline padrão para evitar duplicação */
+    outline: none;
+    /* Adicione um anel de foco visível e claro */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Exemplo de anel azul */
+}
+
+/* Opcional: Estilo de foco para quando qualquer filho do LI estiver focado */
+ul#minha-lista li:focus-within {
+    /* Pode ser o mesmo estilo ou um diferente */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+/* Garanta que o cursor continue sendo de ponteiro */
+ul#minha-lista li {
     cursor: pointer;
 }
