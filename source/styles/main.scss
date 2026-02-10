@@ -1,0 +1,103 @@
+@use 'variaveis';
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite NZ Basic", cursive;
+    color: #fff;
+}
+
+body {
+    background-color: variaveis.$corBG;
+
+    header {
+        background-color: variaveis.$corPrincipal;
+        padding: 1em 2em;
+    }
+
+    main {
+    padding: 1rem 2rem;
+    
+    }
+}
+
+.intro {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    & h2 {
+        color: variaveis.$corPrincipal;
+    }
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+}
+
+.imagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 100vw;
+    list-style: none;
+    gap: 2em
+}
+
+.banner {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: .9em;
+    text-align: center;
+
+    & img {
+        width: 100%;
+        max-height: 23vw;
+        object-fit: cover;
+        display: block;
+        border-radius: 10px;
+        border: 2px solid variaveis.$corPrincipal;
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+    .intro {
+        width: 85%;
+    }
+
+    .imagens {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        }
+
+    .banner img {
+        max-height: 26vw;
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .intro {
+        width: 90%;
+    }
+
+    .imagens {
+        display: block;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .banner {
+        margin-bottom: .75em;
+
+        & img {
+            max-height: 100%;
+        }
+    }
+}
