@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'fonte-brittany';
+    src: url('./assets/BrittanySignature.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-image: url(./images/frente.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "fonte-brittany";
+}
+
+p {
+    font-size: 1.75em;
+    font-weight: 300;
+}
+
+#container-cadastro {
+    max-width: 60vw;
+    background-color: color-mix(#ccc, transparent 10%);
+    padding: 2.5em;
+    border-radius: 0 0 20px 20px;
+    border: 2px solid;
+    border-top: none;
+}
+
+#img-intro {
+    max-width: 100%;
+    border-radius: 10px;
+    align-self: center;
+}
