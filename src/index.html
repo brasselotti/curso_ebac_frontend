@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="@@ENDERECO_DO_CSS">
+</head>
+<body>
+    <main>
+        <h1>Testes JavaScript</h1>
+        <section class="testes">
+            <div class="testes__teste" id="sorteador">
+                <h2>Sorteador de números</h2>
+                <form id="form-sorteador">
+                    <div>
+                        <label for="num-max">Qual é o número máximo?</label>
+                        <input type="number" id="num-max" required min="2" value="2">
+                    </div>
+                    <button type="submit">Sortear número</button>
+                </form>
+            </div>
+            <div class="testes__teste" id="palindromos">
+                <h2>Palíndromos</h2>
+                <p id="legenda-testes">Palíndromos são palavras que quando invertidas, possuem a mesma escrita, vamos testar?</p>
+                <label for="text-palindromo" id="text-label"></label>
+                <input type="text" id="text-palindromo" class="entrada-text">
+                <button type="button" id="button-send">Enviar</button>
+            </div>
+        </section>
+        <div class="resultado">
+            Você executou <span id="nome-teste"></span> e o resultado é: <span id="resultado-valor"></span>
+        </div>
+    </main>
+    <script src="@@ENDERECO_DO_JS"></script>
+</body>
+</html>

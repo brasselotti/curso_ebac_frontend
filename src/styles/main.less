@@ -1,0 +1,129 @@
+@fontePrincipal: Roboto, sans-serif;
+@fonteTitulo: Lobster, cursive;
+@corTexto: #b65b56;
+@corFundo: #ecf0f1;
+@corTextoBtn: #000;
+@corFundoBtn: #fa845c;
+@corFundoHover: #f59777;
+@corExtra: #21d4fc;
+
+body {
+    background-color: @corFundo;
+    font-family: @fontePrincipal;
+    color: @corTexto;
+}
+
+h1 {
+    font-family: @fonteTitulo;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: @fontePrincipal;
+    font-size: 2em;
+    margin: 0;
+}
+
+main {
+    max-width: 85vw;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center;
+}
+
+.testes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+
+    & .testes__teste {
+        border: 2px solid @corFundoBtn;
+        border-radius: 5px;
+        padding: 1em;
+
+        & h2 {
+            justify-self: center;
+            width: 75%;
+            margin-bottom: .5em;
+            border-bottom: 1px solid @corFundoBtn;
+        }
+    }
+}
+
+.btnMixin() {
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: @fontePrincipal;
+    color: #fff;
+    background-color: @corFundoBtn;
+    padding: .5em;
+    border-radius: 8px;
+    border: 1.75px solid @corTexto;
+}
+
+#sorteador {
+    & button {
+        .btnMixin();
+    
+        &:hover {
+            background-color: @corFundoHover;
+        }
+    }
+
+    & input {
+        display: block;
+        margin: 16px auto;
+        font-size: 2em;
+        max-width: 120px;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+        color: @corFundoBtn;
+        border-bottom: 6px solid @corTexto;
+    }
+}
+
+#palindromos {
+    & #legenda-testes {
+        margin: 0;
+    }
+
+    & input {
+        height: 2em;
+        display: block;
+        justify-self: center;
+        width: 50%;
+        margin: 1.5em auto 1.5em;
+        border: .5px solid @corTexto;
+        border-radius: 5px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    & button {
+        .btnMixin();
+
+        &:hover {
+            background-color: @corFundoHover;
+        }
+    }
+}
+
+.resultado {
+    padding: 16px;
+    margin-top: 1.5em;
+    border: 2px solid @corTexto;
+    border-radius: 5px;
+    display: none;
+    color: #fff;
+    background-color: @corFundoHover;
+}
+
+#resultado-valor {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+}
